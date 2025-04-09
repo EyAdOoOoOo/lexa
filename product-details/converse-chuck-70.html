@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LEXA - Converse Chuck 70</title>
+    <link rel="stylesheet" href="../lexa.css">
+    <link rel="stylesheet" href="../product-details.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">
+                <a href="../lexa.html">LEXA</a>
+            </div>
+            <div class="nav-links">
+                <a href="../lexa.html">Home</a>
+                <a href="../newin.html">New In</a>
+                <a href="../women.html">Women</a>
+                <a href="../men.html">Men</a>
+                <a href="../accessories.html">Accessories</a>
+                <a href="../sale.html">Sale</a>
+            </div>
+            <div class="nav-icons">
+                <a href="../login.html" class="auth-link">Login</a>
+                <a href="../signup.html" class="auth-link register">Register</a>
+                <a href="../favorites.html" class="favorite-link"><i class="fas fa-heart"></i></a>
+                <a href="../cart.html" class="cart-icon"><i class="fas fa-shopping-cart"></i></a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="product-details">
+        <div class="product-images">
+            <img src="../women/Converse Chuck 70.jpg" alt="Converse Chuck 70" class="main-image">
+        </div>
+        <div class="product-info">
+            <h1>Converse Chuck 70</h1>
+            <p class="price">$129.99</p>
+            <div class="product-description">
+                <h2>Description</h2>
+                <p>Classic Converse Chuck 70 sneakers with premium materials and enhanced comfort. Perfect for everyday wear with timeless style.</p>
+            </div>
+            <div class="size-selection">
+                <h2>Select Size</h2>
+                <div class="size-options">
+                    <button class="size-btn">36</button>
+                    <button class="size-btn">37</button>
+                    <button class="size-btn">38</button>
+                    <button class="size-btn">39</button>
+                    <button class="size-btn">40</button>
+                    <button class="size-btn">41</button>
+                </div>
+            </div>
+            <button class="add-to-cart" onclick="addToCart({
+                name: 'Converse Chuck 70',
+                price: '129.99',
+                image: 'women/Converse Chuck 70.jpg',
+                size: getSelectedSize()
+            })">Add to Cart</button>
+        </div>
+    </div>
+
+    <script src="../favorites.js"></script>
+    <script src="../cart.js"></script>
+    <script src="../product-details.js"></script>
+</body>
+</html> 

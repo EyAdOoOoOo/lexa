@@ -1,0 +1,193 @@
+/* Product Card Styles */
+.product-card {
+    background: rgb(25, 25, 25);
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.3s ease;
+    margin-bottom: 2rem;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.product-image {
+    position: relative;
+    width: 100%;
+    height: 300px; /* Fixed height for consistency */
+    overflow: hidden;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover .product-image img {
+    transform: scale(1.1);
+}
+
+.product-info {
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.product-info h3 {
+    color: white;
+    font-size: 1.1rem;
+    margin-bottom: 0.8rem;
+    font-weight: 500;
+}
+
+.price {
+    color: white;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+/* Sale Product Styles */
+.sale-tag .product-image::before {
+    content: 'SALE';
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: #ff0000;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 15px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    z-index: 1;
+}
+
+.price-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.original-price {
+    color: #888;
+    text-decoration: line-through;
+    font-size: 0.9rem;
+}
+
+.sale-price {
+    color: #ff0000;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* Add to Cart Button */
+.add-to-cart {
+    background: white;
+    color: black;
+    border: none;
+    padding: 0.8rem 2rem;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+.add-to-cart:hover {
+    background: rgb(236, 236, 236);
+    transform: translateY(-2px);
+}
+
+/* Product Grid Layout */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 2rem 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    .product-image {
+        height: 250px;
+    }
+}
+
+@media (max-width: 480px) {
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .product-info {
+        padding: 1rem;
+    }
+}
+
+/* Keep existing styles but update these specific ones */
+.new-arrivals {
+    padding: 6rem 2rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.new-arrivals h1 {
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    font-family: 'Playfair Display', serif;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 2rem 0;
+}
+
+.favorite-icon {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 2;
+    color: transparent;
+    -webkit-text-stroke: 1.5px black;
+    transition: all 0.3s ease;
+}
+
+.favorite-icon:hover {
+    transform: scale(1.1);
+}
+
+/* Remove quick view and isotope-related styles */
+
+/* Add these styles to newin.css */
+.product-link {
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: inherit;
+}
+
+.product-name {
+    text-decoration: none;
+    color: white;
+}
+
+.product-name:hover h3 {
+    color: #888;
+} 

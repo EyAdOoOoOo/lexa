@@ -1,0 +1,121 @@
+.confirmation-container {
+    padding: 8rem 2rem 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    min-height: calc(100vh - 80px);
+    background: rgb(18, 18, 18);
+    color: white;
+}
+
+.confirmation-box {
+    background: rgb(25, 25, 25);
+    padding: 3rem 2rem;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.success-icon {
+    font-size: 4rem;
+    color: #4CAF50;
+    margin-bottom: 1.5rem;
+}
+
+.confirmation-box h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.confirmation-message {
+    color: #888;
+    margin-bottom: 2rem;
+}
+
+.order-info {
+    background: rgb(35, 35, 35);
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+}
+
+.info-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+    padding: 0.5rem 0;
+}
+
+.info-row:last-child {
+    margin-bottom: 0;
+}
+
+.next-steps {
+    text-align: left;
+    margin-bottom: 2rem;
+}
+
+.next-steps p {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.next-steps ul {
+    list-style: none;
+    padding: 0;
+}
+
+.next-steps li {
+    margin-bottom: 1rem;
+    color: #888;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.next-steps i {
+    color: #4CAF50;
+    font-size: 1.2rem;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.action-buttons a {
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.continue-shopping {
+    background: white;
+    color: black;
+}
+
+.continue-shopping:hover {
+    background: rgb(230, 230, 230);
+}
+
+.track-order {
+    background: transparent;
+    border: 2px solid white;
+    color: white;
+}
+
+.track-order:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+@media (max-width: 768px) {
+    .action-buttons {
+        flex-direction: column;
+    }
+    
+    .action-buttons a {
+        width: 100%;
+        text-align: center;
+    }
+} 

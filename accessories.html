@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LEXA - Accessories</title>
+    <link rel="stylesheet" href="lexa.css">
+    <link rel="stylesheet" href="accessories.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">
+                <a href="lexa.html">LEXA</a>
+            </div>
+            <div class="nav-links">
+                <a href="lexa.html">Home</a>
+                <a href="newin.html">New In</a>
+                <a href="women.html">Women</a>
+                <a href="men.html">Men</a>
+                <a href="accessories.html">Accessories</a>
+                <a href="sale.html">Sale</a>
+            </div>
+            <div class="nav-icons">
+                <a href="login.html" class="auth-link">Login</a>
+                <a href="signup.html" class="auth-link register">Register</a>
+                <a href="favorites.html" class="favorite-link"><i class="fas fa-heart"></i></a>
+                <a href="cart.html" class="cart-icon"><i class="fas fa-shopping-cart"></i></a>
+            </div>
+        </div>
+    </nav>
+
+   
+
+    <!-- Accessories Section -->
+    <section class="accessories-categories">
+        <h1>Accessories</h1>
+
+        <div class="product-grid">
+            <!-- Sale Product Card (Backpack) -->
+            <div class="product-card sale-tag">
+                <div class="product-image">
+                    <i class="fas fa-heart favorite-icon"></i>
+                    <a href="product-details/black-backpack.html" class="product-link">
+                        <img src="accessories/Black backpack.jpg" alt="Black Backpack">
+                    </a>
+                    <span class="sale-label">-40%</span>
+                </div>
+                <div class="product-info">
+                    <a href="product-details/black-backpack.html" class="product-name">
+                        <h3>Black Backpack</h3>
+                    </a>
+                    <div class="price-container">
+                        <p class="original-price">$199.99</p>
+                        <p class="sale-price">$119.99</p>
+                    </div>
+                    <button class="add-to-cart" onclick="addToCart({
+                        name: 'Black Backpack',
+                        price: '119.99',
+                        image: 'accessories/Black backpack.jpg'
+                    })">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Black Bracelet -->
+            <div class="product-card">
+                <div class="product-image">
+                    <i class="fas fa-heart favorite-icon"></i>
+                    <a href="product-details/black-bracelet.html" class="product-link">
+                        <img src="accessories/THOMAS SABO Onyx Bracelet.jpg" alt="Black Bracelet">
+                    </a>
+                </div>
+                <div class="product-info">
+                    <a href="product-details/black-bracelet.html" class="product-name">
+                        <h3>Black Bracelet</h3>
+                    </a>
+                    <p class="price">$79.99</p>
+                    <button class="add-to-cart" onclick="addToCart({
+                        name: 'Black Bracelet',
+                        price: '79.99',
+                        image: 'accessories/THOMAS SABO Onyx Bracelet.jpg'
+                    })">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Classic Leather Handbag -->
+            <div class="product-card">
+                <div class="product-image">
+                    <i class="fas fa-heart favorite-icon"></i>
+                    <a href="product-details/classic-leather-handbag.html" class="product-link">
+                        <img src="accessories/Luxury Genuine Leather Vintage Shoulder Bag for Women – High-Quality Cowhide Handbag - 27 x 4 x 15 cm _ Black.jpg" alt="Classic Leather Handbag">
+                    </a>
+                </div>
+                <div class="product-info">
+                    <a href="product-details/classic-leather-handbag.html" class="product-name">
+                        <h3>Classic Leather Handbag</h3>
+                    </a>
+                    <p class="price">$129.99</p>
+                    <button class="add-to-cart" onclick="addToCart({
+                        name: 'Classic Leather Handbag',
+                        price: '129.99',
+                        image: 'accessories/Luxury Genuine Leather Vintage Shoulder Bag for Women – High-Quality Cowhide Handbag - 27 x 4 x 15 cm _ Black.jpg'
+                    })">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Classic Brown Watch -->
+            <div class="product-card">
+                <div class="product-image">
+                    <i class="fas fa-heart favorite-icon"></i>
+                    <a href="product-details/classic-brown-watch.html" class="product-link">
+                        <img src="accessories/brown watch.jpg" alt="Classic Brown Watch">
+                    </a>
+                </div>
+                <div class="product-info">
+                    <a href="product-details/classic-brown-watch.html" class="product-name">
+                        <h3>Classic Brown Watch</h3>
+                    </a>
+                    <p class="price">$199.99</p>
+                    <button class="add-to-cart" onclick="addToCart({
+                        name: 'Classic Brown Watch',
+                        price: '199.99',
+                        image: 'accessories/brown watch.jpg'
+                    })">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Stylish Sunglasses -->
+            <div class="product-card">
+                <div class="product-image">
+                    <i class="fas fa-heart favorite-icon"></i>
+                    <a href="product-details/stylish-sunglasses.html" class="product-link">
+                        <img src="accessories/glassses.jpg" alt="Stylish Sunglasses">
+                    </a>
+                </div>
+                <div class="product-info">
+                    <a href="product-details/stylish-sunglasses.html" class="product-name">
+                        <h3>Stylish Sunglasses</h3>
+                    </a>
+                    <p class="price">$149.99</p>
+                    <button class="add-to-cart" onclick="addToCart({
+                        name: 'Stylish Sunglasses',
+                        price: '149.99',
+                        image: 'accessories/glassses.jpg'
+                    })">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+<script src="favorites.js"></script>
+<script src="cart.js"></script>
+</html> 

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LEXA - Shopping Cart</title>
+    <link rel="stylesheet" href="lexa.css">
+    <link rel="stylesheet" href="cart.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">
+                <a href="lexa.html">LEXA</a>
+            </div>
+            <div class="nav-links">
+                <a href="lexa.html">Home</a>
+                <a href="newin.html">New In</a>
+                <a href="women.html">Women</a>
+                <a href="men.html">Men</a>
+                <a href="accessories.html">Accessories</a>
+                <a href="sale.html">Sale</a>
+            </div>
+            <div class="nav-icons">
+                <a href="login.html" class="auth-link">Login</a>
+                <a href="signup.html" class="auth-link register">Register</a>
+                <a href="favorites.html" class="favorite-link"><i class="fas fa-heart"></i></a>
+                <a href="cart.html" class="cart-icon"><i class="fas fa-shopping-cart"></i></a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Cart Section -->
+    <section class="cart-section">
+        <h1>Shopping Cart</h1>
+        <div id="cartItems" class="cart-items">
+            <!-- Cart items will be dynamically added here -->
+        </div>
+        <div id="cartSummary" class="cart-summary" style="display: none;">
+            <div class="total">
+                <h3>Total:</h3>
+                <p id="cartTotal">$0.00</p>
+            </div>
+            <a href="checkout.html" class="checkout-btn">Proceed to Checkout</a>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            displayCart();
+        });
+
+        function displayCart() {
+            const cartItems = document.getElementById('cartItems');
+            const cartTotal = document.getElementById('cartTotal');
+            const cartSummary = document.getElementById('cartSummary');
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            
+            if (cart.length === 0) {
+                cartItems.innerHTML = '<p class="empty-cart">Your cart is empty</p>';
+                cartTotal.textContent = '$0.00';
+                cartSummary.style.display = 'none';
+                return;
+            }
+
+            let total = 0;
+            cartItems.innerHTML = cart.map((item, index) => {
+                const itemTotal = parseFloat(item.price) * (item.quantity || 1);
+                total += itemTotal;
+                return `
+                    <div class="cart-item">
+                        <img src="${item.image}" alt="${item.name}">
+                        <div class="item-details">
+                            <h3>${item.name}</h3>
+                            ${item.size ? `<p class="size">Size: ${item.size}</p>` : ''}
+                            <div class="quantity-controls">
+                                <button onclick="updateQuantity(${index}, -1)">-</button>
+                                <span>${item.quantity || 1}</span>
+                                <button onclick="updateQuantity(${index}, 1)">+</button>
+                            </div>
+                        </div>
+                        <div class="price-and-remove">
+                            <div class="price-details">
+                                <p class="item-total">$${itemTotal.toFixed(2)}</p>
+                            </div>
+                            <button onclick="removeFromCart(${index})" class="remove-btn">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+
+            cartTotal.textContent = `$${total.toFixed(2)}`;
+            cartSummary.style.display = 'block';
+        }
+
+        function removeFromCart(index) {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            cart.splice(index, 1);
+            localStorage.setItem('cart', JSON.stringify(cart));
+            displayCart();
+        }
+
+        function updateQuantity(index, change) {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            cart[index].quantity = (cart[index].quantity || 1) + change;
+            
+            if (cart[index].quantity < 1) {
+                cart.splice(index, 1);
+            }
+            
+            localStorage.setItem('cart', JSON.stringify(cart));
+            displayCart();
+        }
+    </script>
+</body>
+</html> 

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LEXA - New Arrivals</title>
+    <link rel="stylesheet" href="lexa.css">
+    <link rel="stylesheet" href="newin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">
+                <a href="lexa.html">LEXA</a>
+            </div>
+            <div class="nav-links">
+                <a href="lexa.html">Home</a>
+                <a href="newin.html">New In</a>
+                <a href="women.html">Women</a>
+                <a href="men.html">Men</a>
+                <a href="accessories.html">Accessories</a>
+                <a href="sale.html">Sale</a>
+            </div>
+            <div class="nav-icons">
+                <a href="login.html" class="auth-link">Login</a>
+                <a href="signup.html" class="auth-link register">Register</a>
+                <a href="favorites.html" class="favorite-link"><i class="fas fa-heart"></i></a>
+                <a href="cart.html" class="cart-icon"><i class="fas fa-shopping-cart"></i></a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- New Arrivals Section -->
+    <section class="new-arrivals">
+        <h1>New Arrivals</h1>
+        
+        <div class="product-grid">
+            <!-- Product cards with favorite icons and simplified structure -->
+            <div class="product-card">
+                <div class="product-image">
+                    <i class="fas fa-heart favorite-icon"></i>
+                    <a href="product-details/crop-fit-tank-top.html" class="product-link">
+                        <img src="new in/Crop Fit Tank Top.png" alt="Crop Fit Tank Top">
+                    </a>
+                </div>
+                <div class="product-info">
+                    <a href="product-details/crop-fit-tank-top.html" class="product-name">
+                        <h3>Crop Fit Tank Top</h3>
+                    </a>
+                    <p class="price">$89.99</p>
+                    <button class="add-to-cart" onclick="addToCart({
+                        name: 'Crop Fit Tank Top',
+                        price: '89.99',
+                        image: 'new in/Crop Fit Tank Top.png'
+                    })">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">
+                    <i class="fas fa-heart favorite-icon"></i>
+                    <a href="product-details/gray-wide-jeans.html" class="product-link">
+                        <img src="new in/Gray Wide Jeans.png" alt="Gray Wide Jeans">
+                    </a>
+                </div>
+                <div class="product-info">
+                    <a href="product-details/gray-wide-jeans.html" class="product-name">
+                        <h3>Gray Wide Jeans</h3>
+                    </a>
+                    <p class="price">$69.99</p>
+                    <button class="add-to-cart" onclick="addToCart({
+                        name: 'Gray Wide Jeans',
+                        price: '69.99',
+                        image: 'new in/Gray Wide Jeans.png'
+                    })">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">
+                    <i class="fas fa-heart favorite-icon"></i>
+                    <a href="product-details/tshirt-oversized.html" class="product-link">
+                        <img src="new in/Tshirt oversized.png" alt="T-shirt oversized">
+                    </a>
+                </div>
+                <div class="product-info">
+                    <a href="product-details/tshirt-oversized.html" class="product-name">
+                        <h3>T-shirt oversized</h3>
+                    </a>
+                    <p class="price">$39.99</p>
+                    <button class="add-to-cart" onclick="addToCart({
+                        name: 'T-shirt oversized',
+                        price: '39.99',
+                        image: 'new in/Tshirt oversized.png'
+                    })">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">
+                    <i class="fas fa-heart favorite-icon"></i>
+                    <a href="product-details/trendy-sweatpants.html" class="product-link">
+                        <img src="new in/trendy Sweatpants.png" alt="Trendy Sweatpants">
+                    </a>
+                </div>
+                <div class="product-info">
+                    <a href="product-details/trendy-sweatpants.html" class="product-name">
+                        <h3>Trendy Sweatpants</h3>
+                    </a>
+                    <p class="price">$119.99</p>
+                    <button class="add-to-cart" onclick="addToCart({
+                        name: 'Trendy Sweatpants',
+                        price: '119.99',
+                        image: 'new in/trendy Sweatpants.png'
+                    })">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Each product card follows the same pattern -->
+            
+            <!-- Last product card example -->
+            <div class="product-card">
+                <div class="product-image">
+                    <i class="fas fa-heart favorite-icon"></i>
+                    <a href="product-details/silver-bracelet.html" class="product-link">
+                        <img src="new in/silver b.jpg" alt="Silver bracelet">
+                    </a>
+                </div>
+                <div class="product-info">
+                    <a href="product-details/silver-bracelet.html" class="product-name">
+                        <h3>Silver bracelet</h3>
+                    </a>
+                    <p class="price">$119.99</p>
+                    <button class="add-to-cart" onclick="addToCart({
+                        name: 'Silver bracelet',
+                        price: '119.99',
+                        image: 'new in/silver b.jpg'
+                    })">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Add new product card -->
+            <div class="product-card">
+                <div class="product-image">
+                    <i class="fas fa-heart favorite-icon"></i>
+                    <a href="product-details/red-bag.html" class="product-link">
+                        <img src="new in/red bag.jpg" alt="Red Bag">
+                    </a>
+                </div>
+                <div class="product-info">
+                    <a href="product-details/red-bag.html" class="product-name">
+                        <h3>Red Bag</h3>
+                    </a>
+                    <p class="price">$149.99</p>
+                    <button class="add-to-cart" onclick="addToCart({
+                        name: 'Red Bag',
+                        price: '149.99',
+                        image: 'new in/red bag.jpg'
+                    })">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+<script src="favorites.js"></script>
+<script src="cart.js"></script>
+<script src="newin.js"></script>
+</html> 

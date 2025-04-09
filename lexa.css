@@ -1,0 +1,443 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Base styles */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(0, 0, 0);
+}
+
+/* Navigation Styles */
+nav {
+    background: rgb(0, 0, 0);
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    transition: background 0.3s ease;
+}
+
+nav.scrolled {
+    background: rgb(0, 0, 0);
+    box-shadow: 0 2px 5px rgb(0, 0, 0);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-family: 'Playfair Display', serif;
+    position: relative;
+    padding: 5px 0;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+}
+
+.logo::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: white;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.logo:hover::after {
+    transform: scaleX(1);
+}
+
+.nav-links {
+    margin-right: auto;
+    margin-left: 2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    padding: 0.5rem 1rem;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+/* Underline hover effect */
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    background-color: rgb(34, 107, 30);
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.nav-links a:hover::after {
+    width: 80%;
+}
+
+.nav-links a:hover {
+    color: rgb(34, 107, 30);
+}
+
+/* Active link style */
+.nav-links a.active {
+    color: rgb(34, 107, 30);
+}
+
+.nav-links a.active::after {
+    width: 80%;
+}
+
+.nav-icons {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-left: auto;
+}
+
+.auth-link {
+    text-decoration: none;
+    color: white;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s ease;
+}
+
+.auth-link:hover {
+    color: rgb(154, 154, 154);
+}
+
+.sign-up {
+    background: rgb(255, 255, 255);
+    color: black;
+}
+
+.sign-up:hover {
+    background: rgb(159, 159, 159);
+    color: black;
+}
+
+/* Hero Section Styles */
+.hero {
+    height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 0 4rem;
+    overflow: hidden;
+    margin-top: 60px;
+    background-color: black;
+}
+
+.hero-image {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 60%;
+    height: 90%;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-image img {
+    max-width: 80%;
+    height: 80%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.hero-content {
+    width: 100%;
+    color: rgb(255, 254, 255);
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 1;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    text-align: left;
+    max-width: 600px;
+    position: absolute;
+    top: -250px;
+    left: 0;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    text-align: left;
+    max-width: 600px;
+    position: absolute;
+    top: -100px;
+    left: 0;
+}
+
+/* Search elements container */
+.search-elements {
+    position: absolute;
+    left: 50%;
+    top: 70%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 500px;
+}
+
+/* Search Bar Styles */
+.search-container {
+    display: flex;
+    width: 100%;
+    max-width: 500px;
+    background: rgb(255, 255, 255);
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    margin-bottom: 1rem;
+}
+
+.search-input {
+    flex: 1;
+    padding: 15px 20px;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    color: black;
+    background: transparent;
+    width: 100%;
+}
+
+.search-input::placeholder {
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.search-button {
+    padding: 0 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    color: black;
+    transition: color 0.3s ease;
+}
+
+.shop-now {
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    background: white;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 30px;
+    width: 30%;
+}
+
+.shop-now:hover {
+    background: #616161;
+    color: white;
+}
+
+/* Categories Section */
+.categories {
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.categories h2 {
+    text-align: center;
+    color: rgb(218, 218, 218);
+    margin-bottom: 3rem;
+    font-size: 2.5rem;
+}
+
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.category-card {
+    position: relative;
+    aspect-ratio: 1; /* Makes cards square */
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.category-image {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.3s ease;
+}
+
+/* Category Images */
+.category-card:nth-child(1) .category-image {
+    background-image: url('Alina_ Studio.jpg');
+}
+
+.category-card:nth-child(2) .category-image {
+    background-image: url('men.jpg');
+}
+
+.category-card:nth-child(3) .category-image {
+    background-image: url('Accessories.jpg');
+}
+
+.category-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 1.5rem;
+    background: linear-gradient(transparent, rgba(0,0,0,0.7));
+    transition: opacity 0.3s ease;
+}
+
+.category-overlay h3 {
+    color: white;
+    font-size: 1.8rem;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.category-link {
+    text-decoration: none;
+    display: block;
+    height: 100%;
+}
+
+.category-card:hover .category-image {
+    transform: scale(1.05);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .category-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1rem;
+    }
+    
+    .categories {
+        padding: 2rem 1rem;
+    }
+}
+
+/* Update the cart icon styles */
+.cart-icon {
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.cart-icon:hover {
+    color: rgb(255, 136, 136);
+}
+
+/* Add these styles to your existing nav styles */
+.logo a {
+    text-decoration: none;
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.logo a:hover {
+    color: rgb(153, 153, 153);
+}
+
+/* Cart Badge */
+.cart-icon {
+    position: relative;
+}
+
+.cart-badge {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background: #ff0000;
+    color: white;
+    font-size: 12px;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+/* Product Card Hover */
+.product-card {
+    transition: transform 0.3s ease;
+}
+
+.auth-link.register {
+    background-color: white;
+    color: black;
+    border-radius: 6px;
+    padding: 8px 16px;
+}
+
+.auth-link.register:hover {
+    background-color: rgb(159, 159, 159);
+    color: black;
+}
+
+/* Navigation heart icon styles */
+.favorite-link i {
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.favorite-link:hover i {
+    color: red;
+}
+
+.product-image {
+    position: relative;
+    width: 100%;
+}
+
+.favorite-icon {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 1;
+    color: transparent;
+    -webkit-text-stroke: 1.5px black;
+}
+
+.favorite-icon.active {
+    color: red;
+    -webkit-text-stroke: 1px red;
+}

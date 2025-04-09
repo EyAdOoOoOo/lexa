@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LEXA - Men's Fashion</title>
+    <link rel="stylesheet" href="lexa.css">
+    <link rel="stylesheet" href="men.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">
+                <a href="lexa.html">LEXA</a>
+            </div>
+            <div class="nav-links">
+                <a href="lexa.html">Home</a>
+                <a href="newin.html">New In</a>
+                <a href="women.html">Women</a>
+                <a href="men.html">Men</a>
+                <a href="accessories.html">Accessories</a>
+                <a href="sale.html">Sale</a>
+            </div>
+            <div class="nav-icons">
+                <a href="login.html" class="auth-link">Login</a>
+                <a href="signup.html" class="auth-link register">Register</a>
+                <a href="favorites.html" class="favorite-link"><i class="fas fa-heart"></i></a>
+                <a href="cart.html" class="cart-icon"><i class="fas fa-shopping-cart"></i></a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Men's Categories Section -->
+    <section class="men-categories">
+        <h1>Men's Fashion</h1>
+
+        <!-- Product Grid -->
+        <div class="product-grid">
+            <!-- Red Sneakers -->
+            <div class="product-card">
+                <div class="product-image">
+                    <i class="fas fa-heart favorite-icon"></i>
+                    <a href="product-details/red-sneakers.html" class="product-link">
+                        <img src="men/red shoes.jpg" alt="Red Sneakers">
+                    </a>
+                    <span class="sale-label">-60%</span>
+                </div>
+                <div class="product-info">
+                    <a href="product-details/red-sneakers.html" class="product-name">
+                        <h3>Red Sneakers</h3>
+                    </a>
+                    <div class="price-container">
+                        <p class="original-price">$129.99</p>
+                        <p class="sale-price">$77.99</p>
+                    </div>
+                    <button class="add-to-cart" onclick="addToCart({
+                        name: 'Red Sneakers',
+                        price: '77.99',
+                        image: 'men/red shoes.jpg'
+                    })">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- New Sale Product Card (Red Shoes) -->
+            <div class="product-card sale-tag">
+                <div class="product-image">
+                    <i class="fas fa-heart favorite-icon"></i>
+                    <a href="product-details/brown-leather-jacket.html" class="product-link">
+                        <img src="men/brown leather jacket.jpg" alt="Black Leather Jacket">
+                    </a>
+                    <span class="sale-label">-50%</span>
+                </div>
+                <div class="product-info">
+                    <a href="product-details/brown-leather-jacket.html" class="product-name">
+                        <h3>Brown Leather Jacket</h3>
+                    </a>
+                    <div class="price-container">
+                        <p class="original-price">$99.99</p>
+                        <p class="sale-price">$49.99</p>
+                    </div>
+                    <button class="add-to-cart" onclick="addToCart({
+                        name: 'Brown Leather Jacket',
+                        price: '49.99',
+                        image: 'men/brown leather jacket.jpg'
+                    })">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product Card 1 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <i class="fas fa-heart favorite-icon"></i>
+                    <a href="product-details/classic-white-tank.html" class="product-link">
+                        <img src="men/white tank.jpg" alt="Classic White Tank">
+                    </a>
+                </div>
+                <div class="product-info">
+                    <a href="product-details/classic-white-tank.html" class="product-name">
+                        <h3>Classic White Tank</h3>
+                    </a>
+                    <p class="price">$29.99</p>
+                    <button class="add-to-cart" onclick="addToCart({
+                        name: 'Classic White Tank',
+                        price: '29.99',
+                        image: 'men/white tank.jpg'
+                    })">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product Card 2 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <i class="fas fa-heart favorite-icon"></i>
+                    <a href="product-details/black-formal-suit.html" class="product-link">
+                        <img src="men/Men's Black High Streetwear Baggy.jpg" alt="Black Formal Suit">
+                    </a>
+                </div>
+                <div class="product-info">
+                    <a href="product-details/black-formal-suit.html" class="product-name">
+                        <h3>Black Formal Suit</h3>
+                    </a>
+                    <p class="price">$299.99</p>
+                    <button class="add-to-cart" onclick="addToCart({
+                        name: 'Black Formal Suit',
+                        price: '299.99',
+                        image: 'Men\'s Black High Streetwear Baggy.jpg'
+                    })">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product Card 3 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <i class="fas fa-heart favorite-icon"></i>
+                    <a href="product-details/casual-button-up-shirt.html" class="product-link">
+                        <img src="men/shirt.jpg" alt="Casual Button-Up Shirt">
+                    </a>
+                </div>
+                <div class="product-info">
+                    <a href="product-details/casual-button-up-shirt.html" class="product-name">
+                        <h3>Casual Button-Up Shirt</h3>
+                    </a>
+                    <p class="price">$0.99</p>
+                    <button class="add-to-cart" onclick="addToCart({
+                        name: 'Casual Button-Up Shirt',
+                        price: '0.99',
+                        image: 'men/shirt.jpg'
+                    })">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product Card 4 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <i class="fas fa-heart favorite-icon"></i>
+                    <a href="product-details/wide-jeans.html" class="product-link">
+                        <img src="men/Baggy men.jpg" alt="Classic Blue Jeans">
+                    </a>
+                </div>
+                <div class="product-info">
+                    <a href="product-details/wide-jeans.html" class="product-name">
+                        <h3>Wide Jeans</h3>
+                    </a>
+                    <p class="price">$79.99</p>
+                    <button class="add-to-cart" onclick="addToCart({
+                        name: 'Wide Jeans',
+                        price: '79.99',
+                        image: 'men/Baggy men.jpg'
+                    })">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product Card 5 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <i class="fas fa-heart favorite-icon"></i>
+                    <a href="product-details/classic-leather-jacket.html" class="product-link">
+                        <img src="men/Leather jacket.jpg" alt="Leather Jacket">
+                    </a>
+                </div>
+                <div class="product-info">
+                    <a href="product-details/classic-leather-jacket.html" class="product-name">
+                        <h3>Classic Leather Jacket</h3>
+                    </a>
+                    <p class="price">$199.99</p>
+                    <button class="add-to-cart" onclick="addToCart({
+                        name: 'Classic Leather Jacket',
+                        price: '199.99',
+                        image: 'men/Leather jacket.jpg'
+                    })">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product Card 6 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <i class="fas fa-heart favorite-icon"></i>
+                    <a href="product-details/black-sneakers.html" class="product-link">
+                        <img src="men/Nike Air.jpg" alt="Casual Sneakers">
+                    </a>
+                </div>
+                <div class="product-info">
+                    <a href="product-details/black-sneakers.html" class="product-name">
+                        <h3>Black Sneakers</h3>
+                    </a>
+                    <p class="price">$89.99</p>
+                    <button class="add-to-cart" onclick="addToCart({
+                        name: 'Black Sneakers',
+                        price: '89.99',
+                        image: 'men/Nike Air.jpg'
+                    })">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+        
+    </section>
+</body>
+<script src="favorites.js"></script>
+<script src="cart.js"></script>
+</html> 

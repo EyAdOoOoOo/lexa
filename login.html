@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LEXA - Login</title>
+    <link rel="stylesheet" href="lexa.css">
+    <link rel="stylesheet" href="auth.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">
+                <a href="lexa.html">LEXA</a>
+            </div>
+            <div class="nav-links">
+                <a href="lexa.html">Home</a>
+                <a href="newin.html">New In</a>
+                <a href="women.html">Women</a>
+                <a href="men.html">Men</a>
+                <a href="accessories.html">Accessories</a>
+                <a href="sale.html">Sale</a>
+            </div>
+            <div class="nav-icons">
+                <a href="login.html" class="auth-link active">Login</a>
+                <a href="signup.html" class="auth-link register">Register</a>
+                <a href="cart.html" class="cart-icon"><i class="fas fa-shopping-cart"></i></a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Login Form -->
+    <div class="auth-container">
+        <div class="auth-box">
+            <h2>Login</h2>
+            <form class="auth-form">
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" required>
+                </div>
+                <div class="form-options">
+                    <label class="remember-me">
+                        <input type="checkbox">
+                        Remember me
+                    </label>
+                    <a href="#" class="forgot-password">Forgot Password?</a>
+                </div>
+                <button type="submit" class="auth-button">Login</button>
+            </form>
+            <div class="auth-divider">
+                <span>or</span>
+            </div>
+            <div class="social-login">
+                <button class="social-button google">
+                    <i class="fab fa-google"></i>
+                    Continue with Google
+                </button>
+                <button class="social-button facebook">
+                    <i class="fab fa-facebook-f"></i>
+                    Continue with Facebook
+                </button>
+            </div>
+            <p class="auth-switch">
+                Don't have an account? <a href="signup.html">Register</a>
+            </p>
+        </div>
+    </div>
+</body>
+</html> 

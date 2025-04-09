@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LEXA - Limited Edition Sneakers</title>
+    <link rel="stylesheet" href="../lexa.css">
+    <link rel="stylesheet" href="../product-details.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">
+                <a href="../lexa.html">LEXA</a>
+            </div>
+            <div class="nav-links">
+                <a href="../lexa.html">Home</a>
+                <a href="../newin.html">New In</a>
+                <a href="../women.html">Women</a>
+                <a href="../men.html">Men</a>
+                <a href="../accessories.html">Accessories</a>
+                <a href="../sale.html">Sale</a>
+            </div>
+            <div class="nav-icons">
+                <a href="../login.html" class="auth-link">Login</a>
+                <a href="../signup.html" class="auth-link register">Register</a>
+                <a href="../favorites.html" class="favorite-link"><i class="fas fa-heart"></i></a>
+                <a href="../cart.html" class="cart-icon"><i class="fas fa-shopping-cart"></i></a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="product-details">
+        <div class="product-images">
+            <img src="../men/limited edition Shoes.jpg" alt="Limited Edition Sneakers" class="main-image">
+        </div>
+        <div class="product-info">
+            <h1>Limited Edition Sneakers</h1>
+            <div class="price-container">
+                <p class="original-price">$129.99</p>
+                <p class="sale-price">$77.99</p>
+            </div>
+            <div class="product-description">
+                <h2>Description</h2>
+                <p>Premium limited edition sneakers featuring unique design and superior comfort. Made with high-quality materials for durability and style.</p>
+            </div>
+            <div class="size-selection">
+                <h2>Select Size</h2>
+                <div class="size-options">
+                    <button class="size-btn">40</button>
+                    <button class="size-btn">41</button>
+                    <button class="size-btn">42</button>
+                    <button class="size-btn">43</button>
+                    <button class="size-btn">44</button>
+                    <button class="size-btn">45</button>
+                </div>
+            </div>
+            <button class="add-to-cart" onclick="addToCart({
+                name: 'Limited Edition Sneakers',
+                price: '77.99',
+                image: 'men/limited edition Shoes.jpg',
+                size: getSelectedSize()
+            })">Add to Cart</button>
+        </div>
+    </div>
+
+    <script src="../favorites.js"></script>
+    <script src="../cart.js"></script>
+    <script src="../product-details.js"></script>
+</body>
+</html> 
